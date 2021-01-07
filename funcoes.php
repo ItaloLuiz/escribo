@@ -15,6 +15,6 @@ function somarNumerosDivisiveisPorTresOuCinco($numero)
     return $total;
 }
 
-echo somarNumerosDivisiveisPorTresOuCinco(11);
+
 
 

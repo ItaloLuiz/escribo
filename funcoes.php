@@ -3,7 +3,7 @@
 function somarNumerosDivisiveisPorTreseCinco($numero)
 {
     if (!is_int($numero)) {
-        return 'Você precisa Informar um número.';
+        return 'Você precisa Informar um número inteiro.';
         exit;
     }
     $total = 0;
@@ -15,6 +15,6 @@ function somarNumerosDivisiveisPorTreseCinco($numero)
     return $total;
 }
 
-echo somarNumerosDivisiveisPorTreseCinco(10);
+echo somarNumerosDivisiveisPorTreseCinco(11);
 
 

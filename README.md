@@ -20,13 +20,19 @@
   Onde X é o jogador atual e Y é a casa em que ele estará
   ao finalizar sua jogada.
 
-## Como usar a Função
+## Como jogar
 
 - Ao baixar o projeto no index.html tem dois botões que podem ser usados
     para jogar.
 - Caso queira testar sem os números aleatórios basta fazer o seguinte
     retirar o comentário da variavel inicio e setar os dois valores.
 - Caso queira testar clicanco nos botões comente a veriavel inicio.  
+
+## Jogando com valores fixos
+
+- Abra arquivo jogoEstatico.html e clique no link: atualizar página
+- Esse arquivo chama o exemplo.js com os dados fixos, melhor para executar
+  os testes;
 
 ```JAVASCRIPT
  let inicio = jogo.jogar(1,1);

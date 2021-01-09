@@ -11,19 +11,18 @@ function resetarJogo() {
     document.location.reload(true);
 }
 
-function jogarDados(jogador) {
-    let quemJogou = localStorage.getItem('quemJoga');
+function jogarDados(jogador) {    
 
     if (jogador == 'jogadorA') {
         document.getElementById('jogadorB').disabled = false;
         document.getElementById('jogadorA').disabled = true;
-        let inicio = jogo.jogar(jogo.jogarPrimeiroDado(), jogo.jogarSegundoDado());
+        jogo.jogar(jogo.jogarDado(), jogo.jogarDado());
     }
 
     if (jogador == 'jogadorB') {
         document.getElementById('jogadorB').disabled = true;
         document.getElementById('jogadorA').disabled = false;
-        let inicio = jogo.jogar(jogo.jogarPrimeiroDado(), jogo.jogarSegundoDado());
+        jogo.jogar(jogo.jogarDado(), jogo.jogarDado());
     }
 
 }  

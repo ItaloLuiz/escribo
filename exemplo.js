@@ -35,7 +35,7 @@ function tabela() {
 
 
     let template = `<div id="tabuleiro">`;
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 100; i >= 1; i--) {
         template += `<div class="casa" id="id_casa-${i}">
            ${mostrarJogador(i)}
           <h4>${i}</h4>

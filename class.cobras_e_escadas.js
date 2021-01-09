@@ -7,23 +7,16 @@ class CobrasEscadas {
         ];
     }
 
-    inicioJogo() {
-        localStorage.setItem('inicioJogo', 0);
-        localStorage.setItem('finalJogo', 100);
+    inicioJogo() {        
         localStorage.setItem('posicaoJogadorA', 0);
         localStorage.setItem('posicaoJogadorB', 0);
         localStorage.setItem('quemJoga', 'jogadorA');
     }
 
-    jogarPrimeiroDado() {
+    jogarDado() {
         let jogarDado = Math.floor(Math.random() * 6 + 1);
         return jogarDado;
-    }
-
-    jogarSegundoDado() {
-        let jogarDado = Math.floor(Math.random() * 6 + 1);
-        return jogarDado;
-    }
+    } 
 
     mudarCasa(nomeJogador, posicaoJogador, posicao) {
         var getPosicao = localStorage.getItem(posicaoJogador);
@@ -46,18 +39,22 @@ class CobrasEscadas {
     jogar(dado1, dado2) {
 
         let somaDados = dado1 + dado2;
-
         let pontosJogadorA = localStorage.getItem('posicaoJogadorA');
         let pontosJogadorB = localStorage.getItem('posicaoJogadorB');
-        let quemJogou = localStorage.getItem('quemJoga');
+        let quemJogou = localStorage.getItem('quemJoga');        
+        
 
-        document.getElementById('casaJogadorA').innerHTML = `<b>${pontosJogadorA}</b>`;
-        document.getElementById('casaJogadorB').innerHTML = `<b>${pontosJogadorB}</b>`;
+        if(document.getElementById('casaJogadorA')){
+            document.getElementById('casaJogadorA').innerHTML = `<b>${pontosJogadorA}</b>`;
+        }
+        if(document.getElementById('casaJogadorB')){
+            document.getElementById('casaJogadorB').innerHTML = `<b>${pontosJogadorB}</b>`;
+        }
+        
 
         if ((pontosJogadorA == 100) || (pontosJogadorB == 100)) {
             //console.log('O jogo acabou!');
-            let msgResultado = '<p><b>O jogo acabou!</b></p>';
-            
+            let msgResultado = '<p><b>O jogo acabou!</b></p>';            
 
             if (pontosJogadorA == 100) {
                 console.log('Jogador A Venceu!');
@@ -67,7 +64,9 @@ class CobrasEscadas {
                 //console.log('Jogador B Venceu!');
                 msgResultado += '<p><b>Jogador B Venceu!</b></p>';
             }
-            document.getElementById('resultado').innerHTML = msgResultado;           
+            if(document.getElementById('resultado')){
+             document.getElementById('resultado').innerHTML = msgResultado;  
+            }         
             return false;
         }
 

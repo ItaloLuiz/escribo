@@ -2,6 +2,13 @@
 
 - Implemente a parte lógica do jogo indiano ["Cobras e Escadas"](https://en.wikipedia.org/wiki/Snakes_and_ladders)
 
+## Classe Principal
+
+- Coloquei outros arquivos nessa branch para apresentar algo visual,
+  o arquivo relacionado ao que foi solicitado no teste é a classe:
+  class.cobras_e_escadas.js
+- Obrigado !
+
 ## Descrição
 
 - Sua tarefa é fazer uma simples classe chamada "CobrasEscadas"
@@ -22,19 +29,24 @@
 
 ## Como jogar
 
-- Ao baixar o projeto no index.html tem dois botões que podem ser usados
-    para jogar.
-- Caso queira testar sem os números aleatórios basta fazer o seguinte
-    retirar o comentário da variavel inicio e setar os dois valores.
-- Caso queira testar clicanco nos botões comente a veriavel inicio.  
+### Jogando no arquivo index.html
 
-## Jogando com valores fixos
+- No arquivo index.html possui três botões: jogadorA, JogadorB e Resetar Jogo
+- Quando um jogador faz sua jogada o botão do outro é sesativado
+- Ao clicar em resetar Jogo o localstorage é limpo.
+- Nessa página os valores das jogadas são feitas de forma randômica.
 
-- Abra arquivo jogoEstatico.html e clique no link: atualizar página
-- Esse arquivo chama o exemplo.js com os dados fixos, melhor para executar
-  os testes;
+### Jogando no arquivo jogoEstatico.html
+
+- Nesse arquivo as jogadas podem ser de forma fixa, ou seja, setando os valores manualmente,
+  para isso basta setar a variável jogoEstatico para true.
+- Para jogar com dados aleatórios basta setar a mesma variável para false.
+- Essa variável esta no arquivo: exemplo.js
 
 ```JAVASCRIPT
+ let jogo = new CobrasEscadas();
+ /*Jogo com dados fixos*/
  let inicio = jogo.jogar(1,1);
- let inicio = jogo.jogar(primeiroDado,segundoDado);
+ /*Jogo com dados aleatórios*/
+ let inicio = jogo.jogar(jogo.jogarDado(),jogo.jogarDado());
 ```

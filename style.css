@@ -1,0 +1,88 @@
+.centro {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    float: none;
+}
+
+#resultado {
+    margin-top: 15px;
+    padding: 15px;
+}
+
+#tabuleiro {
+    width: 550px;
+    height: auto;
+    border: solid 1px #ccc;
+    border-left: none;
+    border-bottom: none;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.casa {
+    width: 10%;
+    height: 45px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border-left: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+}
+
+.casa h4 {
+    position: absolute;
+    left: 36%;
+    top: 15%;
+}
+
+.jogadorN {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    color: transparent;
+    border-radius: 50px;
+    position: relative;
+    line-height: 14px;
+    float: left;
+    margin: 4px;
+    text-align: center;
+
+}
+
+.jogadorA {
+    width: 15px;
+    height: 15px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 50px;
+    position: relative;
+    line-height: 14px;
+    float: left;
+    margin: 4px;
+    text-align: center;
+
+}
+
+.jogadorB {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50px;
+    position: relative;
+    line-height: 14px;
+    float: left;
+    margin: 4px;
+    text-align: center;
+
+}
+
+.legenda {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

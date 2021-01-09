@@ -16,39 +16,56 @@
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    <style>
-        .centro {
-            position: relative;
-            display: block;
-            margin: 0 auto;
-            float: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <h1 class="page-header text-center">Cobras e Escadas</h1>
-        <div class="col-md-6 centro">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="jogoEstatico.html" class="btn btn-primary btn-block" >Atualizar página</a>
-                    <div class="clearfix"></div>
-                    <div class="col-md-12">Jogador A Casa: <span id="casaJogadorA">0</span></div>
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="page-header text-center">Cobras e Escadas</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">                
+                <a href="jogoEstatico.html" class="btn btn-primary">Clique para jogar</a>
+                <button class="btn btn-danger" onclick="resetarJogo()">Resetar Jogo</button>               
+
+                <div class="row legenda">
+                     <div class="col-md-6">
+                         <div class="jogadorA"></div>
+                         Jogador A
+                    </div>
+                     <div class="col-md-6">
+                        <div class="jogadorB"></div>
+                         Jogador B
+                    </div>
+                    <div class="col-md-12">
+                       <div class="well well-sm">
+                        <p>Como os valores estão sendo colocados de forma aleatória,
+                            assim que recarrega a página ou clica no botão para resetar é feito uma jogada.
+                       </p>
+                       <p>
+                           Isso acontece porque as jogadas nessa página são feitas de forma aleatória,
+                           chamando o método <code>jogar</code> sempre que a página é recarregada.
+                       </p>
+                       <p>
+                           No arquivo <code>exemplo.js</code> pode fazer a modificação da variavel <code>jogoEstatico</code>
+                           para <code>true</code> para passar os valores dos dados manualmente, assim fica melhor pra testar o script.
+                       </p>
+                       </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                  
-                    <div class="clearfix"></div>
-                    <div class="col-md-12">Jogador B Casa: <span id="casaJogadorB">0</span></div>
-                </div>
-                
-                <div class="col-md-12 text-center page-header">
-                    <div id="resultado"></div>
-                </div>
+                <div class="clearfix"></div>
+                <div id="resultado"></div>
+            </div>
+            <div class="col-md-9">
+                <div id="tabela">s</div>
             </div>
         </div>
     </div>
-    
+    <script src="class.cobras_e_escadas.js"></script>
+    <script src="exemplo.js"></script>
 </body>
-<script src="class.cobras_e_escadas.js"></script>
-<script src="exemplo.js"></script>
 </html>
